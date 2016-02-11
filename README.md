@@ -6,6 +6,11 @@ All the things i need when for tools and applications that I'm using for develop
 * Ant:xxxx
 * Bower: Setup
 * Spring Roo: Setup
+* Unix: Command List
+
+## API/Libraries
+* MapReduce
+* Apache Spark
 
 ## Runtime
 * Jenkins: Setup
