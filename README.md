@@ -2,7 +2,10 @@
 All the things i need when for tools and applications that I'm using for development
 
 ## Application Development
-* Maven: xxxx
+* Maven: Installation
+* Maven: Simple Web
+* Maven: Java EAR Application
+* Maven: Unit and Integration Test
 * Ant:xxxx
 * Bower: Intallation
 * Bower: Setup Project Dependencies
