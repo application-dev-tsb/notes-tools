@@ -8,9 +8,14 @@ All the things i need when for tools and applications that I'm using for develop
 * Spring Roo: Setup
 * Unix: Command List
 
-## API/Libraries
+## API
+* Facebook API: Setup Mobile
+* Apache Solr: Setup
+
+## Libraries
 * MapReduce
 * Apache Spark
+* Apache Lucene
 
 ## Runtime
 * Jenkins: Setup
