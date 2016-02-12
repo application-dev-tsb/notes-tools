@@ -4,7 +4,8 @@ All the things i need when for tools and applications that I'm using for develop
 ## Application Development
 * Maven: xxxx
 * Ant:xxxx
-* Bower: Setup
+* Bower: Intallation
+* Bower: Setup Project Dependencies
 * Spring Roo: Setup
 * Unix: Command List
 
