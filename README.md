@@ -1,4 +1,4 @@
-# Notes on Development Tools
+# Notes on Development Tools, Libraries, and APIs
 All the things i need when for tools and applications that I'm using for development
 
 ## Application Development
