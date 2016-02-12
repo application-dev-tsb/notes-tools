@@ -20,3 +20,8 @@ All the things i need when for tools and applications that I'm using for develop
 * Glassfish: Setup
 * Google App Engine: Setup Python
 * Google App Engine: Setup Java
+
+## Others
+* Google Analytics: Setup for Website
+* Google Analytics: Setup for Mobile
+* Google Analytics: Using the Tag Manager
