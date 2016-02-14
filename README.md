@@ -11,6 +11,8 @@ All the things i need when for tools and applications that I'm using for develop
 * Bower: Setup Project Dependencies
 * Spring Roo: Setup
 * Unix: Command List
+* Git: Setup
+* Git: Working with Branches
 
 ## API
 * Facebook API: Setup Mobile
