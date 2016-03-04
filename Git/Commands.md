@@ -1,6 +1,12 @@
 # Git: Commands
 NOTE: Commands start with 'git'
 
+#### Config
+```
+config --global user.name <your_username>
+config --global user.email <email@domain.com>
+```
+
 #### Repository
 ```cmd
 init
