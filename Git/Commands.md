@@ -11,4 +11,5 @@ push
 ```
 branch <branch_name>
 checkout <branch_name>
+merge <other_branch>
 ```
