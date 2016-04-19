@@ -2,6 +2,9 @@
 
 Docker
 ```
+help <command>
+    lists the arguments for the command
+
 images
     lists all images
     
