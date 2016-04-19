@@ -14,6 +14,7 @@ ps
 run <imageName> 
     starts an image, downloads it locally if its not available
     --detach
+    -d
         runs the program in the background
     
 stop $(docker ps -a -q)
