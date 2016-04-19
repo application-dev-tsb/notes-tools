@@ -13,9 +13,12 @@ ps
     
 run <imageName> 
     starts an image, downloads it locally if its not available
-    --detach
-    -d
+    --detach / -d
         runs the program in the background
+    --interactive / -i
+        standard input stays open
+    --tty 
+        allocate a virtual terminal
     
 stop $(docker ps -a -q)
     stops all the containers
