@@ -12,7 +12,9 @@ ps
     list all running images
     
 run <imageName> 
-    starts an image, downloads it locally if its not available
+    starts a container, downloads it locally if its not available
+    --name
+        the name of the container, useful for linking
     --detach / -d
         runs the program in the background
     --interactive / -i
@@ -25,4 +27,7 @@ stop $(docker ps -a -q)
     
 rm $(docker ps -a -q)
     deletes all the containers
+    
+logs <container>
+    shows the logs for the container
 ```
