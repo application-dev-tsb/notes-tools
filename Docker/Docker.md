@@ -13,6 +13,8 @@ ps
     
 run <imageName> 
     starts an image, downloads it locally if its not available
+    --detach
+        runs the program in the background
     
 stop $(docker ps -a -q)
     stops all the containers
