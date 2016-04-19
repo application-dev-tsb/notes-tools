@@ -2,6 +2,9 @@
 
 Docker
 ```
+images
+    lists all images
+    
 ps 
     list all running images
     
