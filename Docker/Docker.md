@@ -22,8 +22,12 @@ run <imageName>
     --tty 
         allocate a virtual terminal
     
+stop <container>
 stop $(docker ps -a -q)
     stops all the containers
+    
+restart <container>
+    starts a container if it was stopped
     
 rm $(docker ps -a -q)
     deletes all the containers
