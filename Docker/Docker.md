@@ -1,6 +1,6 @@
 # Commands:
 
-Docker
+## Docker
 ```
 help <command>
     lists the arguments for the command
@@ -34,4 +34,12 @@ rm $(docker ps -a -q)
     
 logs <container>
     shows the logs for the container
+```
+
+## Running Command Line
+```docker
+docker run --interactive --tty \
+    --link web:web \
+    --name web_test \
+    busybox:latest /bin/sh
 ```
