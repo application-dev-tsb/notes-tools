@@ -8,8 +8,8 @@ sudo yum remove java-1.7.0-openjdk
 
 ## Download and Extract the Hadoop Installation
 ```
-wget http://mirror.rise.ph/apache/hadoop/common/stable/hadoop-2.7.3-src.tar.gz
-tar -zxvf /home/ec2-user/hadoop-2.7.3-src.tar.gz
+wget http://mirror.rise.ph/apache/hadoop/common/stable/hadoop-2.7.3.tar.gz
+tar -zxvf /home/ec2-user/hadoop-2.7.3.tar.gz
 ```
 
 ####Resources:
