@@ -27,3 +27,4 @@ cat output/*
 
 ####Resources:
 - [Single-Node Setup](https://hadoop.apache.org/docs/current2/hadoop-project-dist/hadoop-common/SingleCluster.html)
+- [AWS EMR: Amazons SAAS for Hadoop](https://aws.amazon.com/emr/)
