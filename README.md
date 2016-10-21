@@ -24,6 +24,7 @@ All the things i need when for tools and applications that I'm using for develop
 * Apache Lucene
 
 ## Runtime
+* [Hadoop](Hadoop/README.MD)
 * Jenkins: Setup
 * [Docker](Docker/Docker.md)
 * [CoreOS: Clustering with Fleet](https://coreos.com/using-coreos/clustering/)
@@ -32,6 +33,7 @@ All the things i need when for tools and applications that I'm using for develop
 * Google App Engine: Setup Python
 * Google App Engine: Setup Java
 * [Gulp](/Gulp/Basics.md)
+
 
 ## Version Control
 * [Git: Commands](Git/Commands.md)
