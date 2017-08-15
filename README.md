@@ -52,3 +52,9 @@ All the things i need when for tools and applications that I'm using for develop
 
 ## Xamarin
 [YouTube: Continue watching this amazing tutorial](https://youtu.be/LaSPkLJOMlo?t=1h50m35s)
+
+# Cloud Platforms
+
+## Google Cloud Platform
+
+## Amazon Web Services
