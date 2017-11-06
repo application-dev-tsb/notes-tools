@@ -7,7 +7,7 @@
 
 ## Storage
 - Bigtable: HBase equivalent
-- Datastore: Transactional/Distributed, Entity-based Storage
+- Datastore: Transactional/Distributed, Autosharding, Replicated, ACID-compliant
 - Cloud SQL: Managed RDBMS
 - Cloud Spanner: ACID-Compliant RDBMS
 - Cloud Storage: S3 for GCP
