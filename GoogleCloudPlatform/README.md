@@ -9,7 +9,7 @@
 - Bigtable: HBase equivalent
 - Datastore: Transactional/Distributed, Autosharding, Replicated, ACID-compliant
 - Cloud SQL: Managed RDBMS
-- Cloud Spanner: ACID-Compliant RDBMS; Possibly the only distibuted database that satisfies all 3 in the CAP Theorem
+- [Cloud Spanner](CloudSpanner): ACID-Compliant RDBMS; Possibly the only distibuted database that satisfies all 3 in the CAP Theorem
 - Cloud Storage: S3 for GCP
 
 ## Etc
