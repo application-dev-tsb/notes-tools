@@ -1,4 +1,5 @@
 # Google Cloud Platform
+The friendly cloud platform
 
 ## Compute
 - Compute Engine: VM with OS
