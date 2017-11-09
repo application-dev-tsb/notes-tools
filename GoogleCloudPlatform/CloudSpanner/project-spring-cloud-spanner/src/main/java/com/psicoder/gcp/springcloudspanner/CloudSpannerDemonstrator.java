@@ -1,12 +1,14 @@
 package com.psicoder.gcp.springcloudspanner;
 
 import com.google.cloud.spanner.*;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import java.util.Arrays;
+
+import static java.util.Arrays.asList;
 
 @Component
 public class CloudSpannerDemonstrator {
@@ -18,11 +20,19 @@ public class CloudSpannerDemonstrator {
 
     Spanner spanner;
 
+    /**
+     * docs:
+     * https://developers.google.com/api-client-library/java/google-oauth-java-client/oauth2
+     */
     @PostConstruct
+    @SneakyThrows
     public void init() {
-        SpannerOptions options = SpannerOptions.newBuilder()
-                .setProjectId(projectId)
-                .build();
+
+        //using authentication:
+        //https://cloud.google.com/docs/authentication/getting-started
+        //don't forget to set the environment variable for the service account:
+        //GOOGLE_APPLICATION_CREDENTIALS=<path_to_service_account_file>
+        SpannerOptions options = SpannerOptions.getDefaultInstance();
 
         this.spanner = options.getService();
     }
@@ -42,7 +52,7 @@ public class CloudSpannerDemonstrator {
                 .to(demo.getName())
                 .build();
 
-        dbClient.write(Arrays.asList(mutation));
+        dbClient.write(asList(mutation));
 
         return demo;
     }
