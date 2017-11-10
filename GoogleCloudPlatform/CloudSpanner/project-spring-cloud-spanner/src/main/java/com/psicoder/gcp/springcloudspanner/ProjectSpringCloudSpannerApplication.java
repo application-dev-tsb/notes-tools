@@ -16,9 +16,11 @@ public class ProjectSpringCloudSpannerApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Demo demo = new Demo();
-		demo.setName("Test Row");
+//		Demo demo = new Demo();
+//		demo.setName("Test Row");
+//
+//		demonstrator.create(demo);
 
-		demonstrator.create(demo);
+		demonstrator.createDatabase();
 	}
 }
