@@ -51,11 +51,6 @@ Automated provisioning for everything AWS. Be sure to know the individual tech b
             "Value":"Bastion"
          }
       ]
-   },
-   "Metadata":{  
-      "AWS::CloudFormation::Designer":{  
-         "id":"46e067b1-9588-487c-b947-3520b4745901"
-      }
    }
 }
 ```
