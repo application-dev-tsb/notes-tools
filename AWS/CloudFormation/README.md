@@ -23,3 +23,39 @@ Automated provisioning for everything AWS. Be sure to know the individual tech b
     }
 }
 ```
+- EC2 on VPC
+```json
+{  
+   "Type":"AWS::EC2::Instance",
+   "Properties":{  
+      "ImageId":"ami-e99f4896",
+      "InstanceType":"t2.micro",
+      "KeyName":{  
+         "Ref":"KeyName"
+      },
+      "NetworkInterfaces":[  
+         {  
+            "AssociatePublicIpAddress":"true",
+            "DeviceIndex":"0",
+            "DeleteOnTermination":"true",
+            "GroupSet":[  
+               {  
+                  "Ref":"SSHPublic"
+               }
+            ]
+         }
+      ],
+      "Tags":[  
+         {  
+            "Key":"Name",
+            "Value":"Bastion"
+         }
+      ]
+   },
+   "Metadata":{  
+      "AWS::CloudFormation::Designer":{  
+         "id":"46e067b1-9588-487c-b947-3520b4745901"
+      }
+   }
+}
+```
