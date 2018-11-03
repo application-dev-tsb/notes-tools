@@ -27,7 +27,7 @@ All the things i need when for tools and applications that I'm using for develop
 * [Hadoop](Hadoop/README.MD)
 * Jenkins: Setup
 * [Docker](Docker/Docker.md) - container runtime
-* [Kubernetes](https://kubernetes.io) - container orchestration
+* [Kubernetes](Kubernetes/README.md) - container orchestration
 * [CoreOS: Clustering with Fleet](https://coreos.com/using-coreos/clustering/)
 * Wildfly: Setup
 * Glassfish: Setup
