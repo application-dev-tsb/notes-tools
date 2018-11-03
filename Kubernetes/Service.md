@@ -45,3 +45,8 @@ kubectl label pod $POD_NAME app=v1 --overwrite
 ```
 kubectl get pods -l app=v1
 ```
+
+#### Deleting a Service (by Label)
+```
+kubectl delete service -l run=kubernetes-bootcamp
+```
