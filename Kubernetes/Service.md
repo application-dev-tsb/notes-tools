@@ -6,3 +6,22 @@ An abstraction which defines a logical set of Pods and a policy by which to acce
 - NodePort - Exposes the Service on the same port of each selected Node in the cluster using NAT. Makes a Service accessible from outside the cluster using <NodeIP>:<NodePort>. Superset of ClusterIP.
 - LoadBalancer - Creates an external load balancer in the current cloud (if supported) and assigns a fixed, external IP to the Service. Superset of NodePort.
 - ExternalName - Exposes the Service using an arbitrary name (specified by externalName in the spec) by returning a CNAME record with the name. No proxy is used. This type requires v1.7 or higher of kube-dns
+
+#### Exposing a Pod as a Service
+- expose the sample deployment
+```
+kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
+```
+- check the status of the service
+```
+kubectl describe services/kubernetes-bootcamp
+```
+- node port
+```
+kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}'
+```
+- verify service exposure
+```
+kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}'
+curl $(minikube ip):$NODE_PORT
+```
