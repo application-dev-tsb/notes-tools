@@ -68,6 +68,6 @@ kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{
 ```
 - use the proxy endpoint to gain info on the deployment
 ```
-GET http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME
+curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME
 ```
 
