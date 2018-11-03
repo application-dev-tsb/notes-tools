@@ -8,6 +8,7 @@ An abstraction which defines a logical set of Pods and a policy by which to acce
 - ExternalName - Exposes the Service using an arbitrary name (specified by externalName in the spec) by returning a CNAME record with the name. No proxy is used. This type requires v1.7 or higher of kube-dns
 
 #### Nodeport
+Lets expose one of our app as a service
 - expose the sample deployment
 ```
 kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
@@ -24,4 +25,19 @@ kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0)
 ```
 kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}'
 curl $(minikube ip):$NODE_PORT
+```
+
+#### Labels
+Labels make it so much easier to find kubernetes resources
+- get the pod name that we want to label
+```
+kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}'
+```
+- get the pod data, note the 'Labels' section
+```
+kubectl describe pods $POD_NAME
+```
+- apply the label (by force, using the overwrite flag)
+```
+kubectl label pod $POD_NAME app=v1 --overwrite
 ```
