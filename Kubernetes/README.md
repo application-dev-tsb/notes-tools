@@ -47,5 +47,14 @@ minikube start --vm-driver=none
 #### Verify Installation
 ```
 kubectl cluster-info
+
 kubectl get nodes
+```
+
+#### Deployment Basics
+- running and verifying a deployment
+```
+kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080
+
+kubectl get deployments
 ```
