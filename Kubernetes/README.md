@@ -2,7 +2,9 @@
 Manages the lifecycle or containerized (Docker) applications
 
 #### Minikube Installation
-Minikube is a Kubernetes runtime for local development
+Minikube is a Kubernetes runtime for local development. 
+
+Note: the following sequence only works on Ubuntu
 - [install docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository)
 ```
 sudo apt-get update
@@ -31,5 +33,5 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.30.0/minik
 
 #### Start Minikube
 ```
-minikube start
+minikube start --vm-driver=none
 ```
