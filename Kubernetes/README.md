@@ -34,14 +34,17 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.30.0/minik
 ```
 sudo snap install kubectl --classic
 ```
+- change ownership of files to avoid having to sudo every kubectl commands
+```
+sudo chown $USER /home/$USER/.minikube/**
+sudo chown $USER /home/$USER/.kube/**
+```
 
 #### Start Minikube
 ```
-sudo chown user .minikube/**
-sudo chown user .kube/**
 minikube start --vm-driver=none
 ```
 #### Verify Installation
 ```
-sudo kubectl cluster-info
+kubectl cluster-info
 ```
