@@ -38,4 +38,5 @@ sudo snap install kubectl --classic
 #### Start Minikube
 ```
 minikube start --vm-driver=none
+sudo kubectl cluster-info
 ```
