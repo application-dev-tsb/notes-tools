@@ -1,7 +1,7 @@
 # Scaling
 Accomplished by changing the number of replicas in a Deployment
 
-#### Creating replicas
+#### Scaling Up: Creating Replicas
 - scale up the deployment
 ```
 kubectl scale deployments/kubernetes-bootcamp --replicas=4
@@ -19,4 +19,14 @@ kubectl get pods -o wide
 kubectl describe services/kubernetes-bootcamp
 
 curl $(minikube ip):$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+```
+
+#### Scaling Down
+- just set the 'desired state'
+```
+kubectl scale deployments/kubernetes-bootcamp --replicas=2
+```
+- scale to zero
+```
+kubectl scale deployments/kubernetes-bootcamp --replicas=0
 ```
