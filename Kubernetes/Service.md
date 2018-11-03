@@ -41,3 +41,7 @@ kubectl describe pods $POD_NAME
 ```
 kubectl label pod $POD_NAME app=v1 --overwrite
 ```
+- now you can select resource by label
+```
+kubectl get pods -l app=v1
+```
