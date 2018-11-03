@@ -58,3 +58,12 @@ kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcam
 
 kubectl get deployments
 ```
+- application proxy, for exposing containers locally
+```
+kubectl proxy
+```
+- getting the name of the deployments
+```
+kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}'
+```
+
