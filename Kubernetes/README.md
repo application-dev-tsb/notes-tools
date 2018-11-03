@@ -1,2 +1,17 @@
 # Kubernetes
 Manages the lifecycle or containerized (Docker) applications
+
+#### Minikube Installation
+Minikube is a Kubernetes runtime for local development
+- install docker
+```
+sudo apt-get update
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+ 
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
