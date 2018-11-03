@@ -14,3 +14,9 @@ kubectl get deployments
 ```
 kubectl get pods -o wide
 ```
+- well, thats it if you exposed it as a service, the replicas are load-balanced
+```
+kubectl describe services/kubernetes-bootcamp
+
+curl $(minikube ip):$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+```
