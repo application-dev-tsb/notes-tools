@@ -47,4 +47,5 @@ minikube start --vm-driver=none
 #### Verify Installation
 ```
 kubectl cluster-info
+kubectl get nodes
 ```
