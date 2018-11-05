@@ -1,7 +1,7 @@
 # Kubernetes
 Manages the lifecycle or containerized (Docker) applications
 
-#### Minikube Installation
+#### Minikube Installation (Ubuntu)
 Minikube is a Kubernetes runtime for local development. 
 
 Note: the following sequence only works on Ubuntu
@@ -40,10 +40,27 @@ sudo chown $USER /home/$USER/.minikube/**
 sudo chown $USER /home/$USER/.kube/**
 ```
 
+#### Minicube Installation (Windows)
+- as admin, ensure you have [Chocolatey](https://chocolatey.org/install)
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+- [install](https://github.com/kubernetes/minikube)
+```
+choco install minikube
+choco install kubernetes-cli
+```
+
 #### Start Minikube
+- ubuntu
 ```
 minikube start --vm-driver=none
 ```
+- windows on hyper-v
+```
+minikube start --vm-driver hyperv
+```
+
 #### Verify Installation
 ```
 kubectl cluster-info
