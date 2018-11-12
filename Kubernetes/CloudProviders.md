@@ -24,5 +24,5 @@ kubectl expose deployment <deployment_name> --type LoadBalancer --port 80 --targ
 ```
 - verify
 ```
-kubectl get service hello-server
+kubectl get service <deployment_name>
 ```
