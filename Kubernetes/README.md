@@ -1,6 +1,8 @@
 # Kubernetes
 Manages the lifecycle or containerized (Docker) applications
 
+[Skip the minikube installation](CloudProviders.md)
+
 #### Minikube Installation (Ubuntu)
 Minikube is a Kubernetes runtime for local development. 
 
