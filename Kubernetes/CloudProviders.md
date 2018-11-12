@@ -1,4 +1,4 @@
-# kubctl
+# Cloud Providers
 
 #### AWS EKS
 - make sure you have the latest and greatest version of AWS CLI, otherwise its a shit-ton of pain
