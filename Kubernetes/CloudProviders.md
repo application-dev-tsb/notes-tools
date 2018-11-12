@@ -16,6 +16,7 @@ gcloud config set project <gcp_project>
 gcloud config set compute/zone <gcp_zone>
 gcloud container clusters get-credentials <cluster>
 ```
+- [create an image and deploy](/Docker/GoogleContainerRegistry.md) to GCP Container Registries
 - deploy
 ```
 kubectl run <deployment_name> --image gcr.io/google-samples/hello-app:1.0 --port 8080
