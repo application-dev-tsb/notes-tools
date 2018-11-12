@@ -19,7 +19,7 @@ gcloud container clusters get-credentials <cluster>
 - [create an image and deploy](/Docker/GoogleContainerRegistry.md) to GCP Container Registry
 - deploy
 ```
-kubectl run <deployment_name> --image gcr.io/google-samples/hello-app:1.0 --port 8080
+kubectl run <deployment_name> --image gcr.io/<gcp_project>/<image>:<tag> --port 8080
 kubectl expose deployment <deployment_name> --type LoadBalancer --port 80 --target-port 8080
 ```
 - verify
