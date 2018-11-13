@@ -17,10 +17,30 @@ gcloud config set compute/zone <gcp_zone>
 gcloud container clusters get-credentials <cluster>
 ```
 - [create an image and deploy](/Docker/GoogleContainerRegistry.md) to GCP Container Registry
-- deploy
+- deploy an image with replica set
 ```
 kubectl run <deployment_name> --image gcr.io/<gcp_project>/<image>:<tag> --port 8080
-kubectl expose deployment <deployment_name> --type LoadBalancer --port 80 --target-port 8080
+```
+- expose the replica set via a service [(http balancer)](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer)
+```
+#kubectl expose deployment <deployment_name> --type LoadBalancer --port 80 --target-port 8080
+kubectl expose deployment <deployment_name> --target-port=8080 --type=NodePort
+kubectl get service <deployment_name>
+```
+- create an ingress resource
+```
+#basic-ingress.yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: basic-ingress
+spec:
+  backend:
+    serviceName: <deployment_name>
+    servicePort: 8080
+```
+```
+kubectl apply -f basic-ingress.yaml
 ```
 - verify
 ```
