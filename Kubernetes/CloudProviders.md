@@ -24,7 +24,7 @@ kubectl run <deployment_name> --image gcr.io/<gcp_project>/<image>:<tag> --port 
 - expose the replica set via a service [(http balancer)](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer)
 ```
 #kubectl expose deployment <deployment_name> --type LoadBalancer --port 80 --target-port 8080
-kubectl expose deployment <deployment_name> --target-port=8080 --type=NodePort
+kubectl expose deployment <deployment_name> --target-port=8080 --type=NodePort --port 80
 kubectl get service <deployment_name>
 ```
 - create an ingress resource
