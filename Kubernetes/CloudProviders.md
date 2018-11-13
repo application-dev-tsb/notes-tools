@@ -33,7 +33,7 @@ kubectl get service <deployment_name>
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: basic-ingress
+  name: <ingress_name>
 spec:
   backend:
     serviceName: <deployment_name>
@@ -44,5 +44,6 @@ kubectl apply -f basic-ingress.yaml
 ```
 - verify
 ```
+kubectl get ingress <ingress_name>
 kubectl get service <deployment_name>
 ```
