@@ -21,13 +21,12 @@ gcloud container clusters get-credentials <cluster>
 ```
 kubectl run <deployment_name> --image gcr.io/<gcp_project>/<image>:<tag> --port 8080
 ```
-- expose the replica set via a service [(http balancer)](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer)
+- (a) expose the replica set via a service [(ingress)](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer)
 ```
-#kubectl expose deployment <deployment_name> --type LoadBalancer --port 80 --target-port 8080
 kubectl expose deployment <deployment_name> --target-port=8080 --type=NodePort --port 80
 kubectl get service <deployment_name>
 ```
-- create an ingress resource
+- (a) create an ingress resource
 ```
 #basic-ingress.yaml
 apiVersion: extensions/v1beta1
@@ -42,8 +41,13 @@ spec:
 ```
 kubectl apply -f basic-ingress.yaml
 ```
+- (b) expose via load balancer
+```
+kubectl expose deployment <deployment_name> --type LoadBalancer --port 80 --target-port 8080
+```
 - verify
 ```
 kubectl get ingress <ingress_name>
 kubectl get service <deployment_name>
 ```
+
