@@ -30,6 +30,8 @@ kubectl get deployments
 # exposes a deployment on 'target-port' 8080, to the outside world via 'port' 80
 kubectl expose deployment <deployment_name> --type LoadBalancer --port 80 --target-port 8080
 kubectl get services
+
+# wait for it...seriously...it takes a while, go grab some coffee
 ```
 
 #### Deployment with NodePort+Ingress
@@ -65,6 +67,8 @@ spec:
 # create ingress service	
 kubectl apply -f my-app-ingress.yaml
 kubectl get ingress
+
+# wait for it...seriously...it takes a while, go grab some coffee
 ```
 
 #### References
