@@ -35,29 +35,36 @@ kubectl get services
 #### Deployment with NodePort+Ingress
 Lets do it the [hard way](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer)
 ```
-# deploy a replica set and open port 8080
-kubectl run <deployment_name> --image gcr.io/<gcp_project>/<image>:<tag> --port 8080
+# runs the container and opens the selected port, with 3 replicas
+kubectl run my-app-deployment --image=gcr.io/kwler-net/my-app:v1 --port=80 --replicas=3
 kubectl get deployments
 
-# create a NodePort
-kubectl expose deployment <deployment_name> --target-port=8080 --type=NodePort --port 80
-kubectl get service <deployment_name>
+# create a cluster load balancer vi NodePort
+# target-port => 80, Name or number for the port on the container that the service should direct traffic to. Optional.
+# port => 80, The port that the service should serve on. Copied from the resource being exposed, if unspecified
+kubectl expose deployment my-app-deployment --type=NodePort --name=my-app-nodeport --target-port=80 --port=8080
+kubectl get services
 
-# create a new file:
-# basic-ingress.yaml
+# node-port => 31558, internal port on this cluster
+# example
+# NAME           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+# kubernetes     ClusterIP   10.35.240.1    <none>        443/TCP        1d
+# my-node-port   NodePort    10.35.240.97   <none>        8080:31558/TCP   1m
+
+# create an ingress service to expose the app to the world
+# filename: my-app-ingress.yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: <ingress_name>
+  name: my-app-ingress
 spec:
   backend:
-    serviceName: <deployment_name>
+    serviceName: my-app-nodeport
     servicePort: 8080
-
-# deploy the service
-kubectl apply -f basic-ingress.yaml
-kubectl get ingress <ingress_name>
-kubectl get service <deployment_name>
+	
+# create ingress service	
+kubectl apply -f my-app-ingress.yaml
+kubectl get ingress
 ```
 
 #### References
