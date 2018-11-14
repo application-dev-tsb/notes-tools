@@ -2,10 +2,14 @@
 - install (one time)
 ```
 gcloud components install kubectl
-gcloud config set project [PROJECT_ID]
-gcloud config set compute/zone us-central1-b
+gcloud config set project <project>
+gcloud config set compute/zone <zone>
+```
+- choose cluister
+```
+gcloud container clusters get-credentials <cluster>
 ```
 - deploy
 ```
-kubectl run web --image=gcr.io/google-samples/hello-app:1.0 --port=8080
+kubectl run web --image=gcr.io/<project>/<image>:<tag> --port=8080
 ```
